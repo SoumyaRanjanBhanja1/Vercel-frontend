@@ -26,7 +26,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:10000/api/Signup", formData);
+      const response = await axios.post("https://vercel-frontend-lake-nine.vercel.app/", formData);
       console.log("Signup Successful", response.data);
       navigate("/Login");
       setFormData({ email: "", password: "" });
